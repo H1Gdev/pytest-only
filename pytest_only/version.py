@@ -1,6 +1,6 @@
-import pkg_resources
+from importlib import metadata
 
 try:
-    __version__ = pkg_resources.get_distribution('pytest-only').version
+    __version__ = metadata.version('pytest-only')
 except pkg_resources.DistributionNotFound:
     __version__ = 'dev'
